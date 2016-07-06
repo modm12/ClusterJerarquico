@@ -31,7 +31,6 @@ import javax.xml.bind.annotation.XmlRootElement;
     @NamedQuery(name = "Individuo.findByNombre", query = "SELECT i FROM Individuo i WHERE i.nombre = :nombre"),
     @NamedQuery(name = "Individuo.findByDpi", query = "SELECT i FROM Individuo i WHERE i.dpi = :dpi"),
     @NamedQuery(name = "Individuo.findByEsCivil", query = "SELECT i FROM Individuo i WHERE i.esCivil = :esCivil"),
-    @NamedQuery(name = "Individuo.findByMunicipio", query = "SELECT i FROM Individuo i WHERE i.municipio = :municipio"),
     @NamedQuery(name = "Individuo.findBySexo", query = "SELECT i FROM Individuo i WHERE i.sexo = :sexo")})
 public class Individuo implements Serializable {
 
@@ -49,22 +48,10 @@ public class Individuo implements Serializable {
     private String dpi;
     @Column(name = "EsCivil")
     private Integer esCivil;
-    @Column(name = "Municipio")
-    private String municipio;
     @Column(name = "Sexo")
     private Boolean sexo;
 
     public Individuo() {
-    }
-
-    public Individuo(Integer id, String departamento, String nombre, String dpi, Integer esCivil, String municipio, Boolean sexo) {
-        this.id = id;
-        this.departamento = departamento;
-        this.nombre = nombre;
-        this.dpi = dpi;
-        this.esCivil = esCivil;
-        this.municipio = municipio;
-        this.sexo = sexo;
     }
 
     public Individuo(Integer id) {
@@ -111,14 +98,6 @@ public class Individuo implements Serializable {
         this.esCivil = esCivil;
     }
 
-    public String getMunicipio() {
-        return municipio;
-    }
-
-    public void setMunicipio(String municipio) {
-        this.municipio = municipio;
-    }
-
     public Boolean getSexo() {
         return sexo;
     }
@@ -149,7 +128,7 @@ public class Individuo implements Serializable {
 
     @Override
     public String toString() {
-        return "Conexion.Individuo[ id=" + id + " ]";
+        return "Conexion.exceptions.Individuo[ id=" + id + " ]";
     }
     
 }

@@ -32,7 +32,8 @@ public class Conexion {
         try{
             emf = Persistence.createEntityManagerFactory("Cluster_JerarquicoPU");
             
-            System.out.print("prueba");
+            
+            
             
         } catch (Exception ex) {
             emf=null;           
