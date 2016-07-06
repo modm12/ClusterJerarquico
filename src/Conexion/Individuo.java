@@ -57,6 +57,16 @@ public class Individuo implements Serializable {
     public Individuo() {
     }
 
+    public Individuo(Integer id, String departamento, String nombre, String dpi, Integer esCivil, String municipio, Boolean sexo) {
+        this.id = id;
+        this.departamento = departamento;
+        this.nombre = nombre;
+        this.dpi = dpi;
+        this.esCivil = esCivil;
+        this.municipio = municipio;
+        this.sexo = sexo;
+    }
+
     public Individuo(Integer id) {
         this.id = id;
     }

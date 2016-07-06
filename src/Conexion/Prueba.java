@@ -18,7 +18,8 @@ public class Prueba {
         // TODO code application logic here
         IndividuoJpaController controlador;
         controlador= new IndividuoJpaController(Conexion.getConexion().getEmf());
-        controlador.create(new Individuo());
+        Individuo In=  new Individuo(1, "s", "d", "d", 12, "m", true);
+        controlador.create(In);
     }
     
 }

@@ -17,7 +17,7 @@ public class Conexion {
     private static Conexion unicaConexion;
     private int idUsuario;
 
-    public static Conexion getConexion(String usuario, String contrasenia) {
+    public static Conexion getConexion() {
         if (unicaConexion == null) {
             try {
                 unicaConexion = new Conexion();
@@ -28,17 +28,14 @@ public class Conexion {
         return unicaConexion;
     }
 
-    public static Conexion getConexion(){
-        return unicaConexion;
-    }
-
     private Conexion() {
         try{
-            emf = Persistence.createEntityManagerFactory("HospitalRoblesPU");
+            emf = Persistence.createEntityManagerFactory("Cluster_JerarquicoPU");
+            
+            System.out.print("prueba");
             
         } catch (Exception ex) {
-            emf=null;            emf = Persistence.createEntityManagerFactory("HospitalRoblesPU");
-
+            emf=null;           
             JOptionPane.showMessageDialog(null, "Imposible establecer conexión con el servidor.\n\rRevise su conexión e intentelo de nuevo.", "", JOptionPane.INFORMATION_MESSAGE);
         }
     }
