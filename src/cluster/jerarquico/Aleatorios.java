@@ -47,7 +47,7 @@ public class Aleatorios {
         posicion = r.nextInt(22);
         in.setDepartamento(generarDepartamento(posicion));
         in.setDpi(generarDpi()+" "+posicion+" 00");
-        posicion = r.nextInt(3);
+        posicion = r.nextInt(2);
         in.setEsCivil(posicion);
         return in;
         
